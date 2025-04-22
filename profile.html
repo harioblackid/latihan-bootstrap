@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    <style>
+        .carousel-item {
+            height: 400px;
+        }
+
+        .carousel-item .jumbotron {
+            height: 100%;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: #000;
+        }
+
+        .pricing-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .article-img {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            color: #000;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .navbar {
+            background-color: #1f1f1f !important;
+        }
+
+        body.dark-mode .navbar .navbar-brand,
+        body.dark-mode .navbar .nav-link {
+            color: #e0e0e0 !important;
+        }
+
+        body.dark-mode .carousel-item .jumbotron {
+            background-color: #333333;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode footer {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .btn-primary {
+            background-color: #bb86fc;
+            border-color: #bb86fc;
+            color: #121212;
+        }
+
+        body.dark-mode .btn-primary:hover {
+            background-color: #9a67ea;
+            border-color: #9a67ea;
+            color: #121212;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Brand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <button id="darkModeToggle" class="btn btn-outline-secondary ms-auto">Dark Mode</button>
+        </div>
+    </nav>
+
+    <style>
+        /* Profile page specific styles */
+        .profile-left {
+            background-color: #d3d3d3;
+            /* gray background */
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .profile-avatar {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 1rem auto;
+        }
+
+        .profile-name {
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .profile-profession {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 4rem;
+        }
+
+        .profile-contact {
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .profile-right {
+            position: relative;
+            min-height: 100vh;
+            padding: 2rem;
+            color: white;
+            overflow: hidden;
+        }
+
+        .profile-right .background-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            filter: brightness(0.6);
+        }
+
+        .profile-right .content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: right;
+            flex-direction: column;
+        }
+
+        .btn-github {
+            border: 1px solid black;
+            color: black;
+            background-color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 0.25rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .btn-github:hover {
+            background-color: #f0f0f0;
+            color: black;
+            text-decoration: none;
+        }
+
+        .btn-github svg {
+            width: 20px;
+            height: 20px;
+            fill: black;
+        }
+    </style>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 profile-left d-flex flex-column">
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar" class="profile-avatar rounded" />
+                <div class="profile-name">John Doe</div>
+                <div class="profile-profession">Front-End Developer</div>
+                <div class="profile-contact">
+                    <p>Kota: Jakarta</p>
+                    <p>Negara: Indonesia</p>
+                </div>
+            </div>
+            <div class="col-9 profile-right">
+                <div class="background-image"></div>
+                <div class="content">
+                    <h1>Welcome to My Profile</h1>
+                    <a href="https://github.com/johndoe" target="_blank" class="btn-github" rel="noopener noreferrer"
+                        aria-label="GitHub Profile">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            focusable="false">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.754-1.333-1.754-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.997.108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.335-5.466-5.93 0-1.31.47-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.29-1.552 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.48 5.92.43.37.823 1.1.823 2.22 0 1.606-.015 2.896-.015 3.286 0 .32.216.694.825.576C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Nama Pengembang | <a href="#"
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Back to Top</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                toggleButton.textContent = 'Light Mode';
+            } else {
+                toggleButton.textContent = 'Dark Mode';
+            }
+        });
+    </script>
+</body>
+
+</html>
