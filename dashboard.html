@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    <style>
+        .carousel-item {
+            height: 400px;
+        }
+
+        .carousel-item .jumbotron {
+            height: 100%;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: #000;
+        }
+
+        .pricing-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .article-img {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            color: #000;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .navbar {
+            background-color: #1f1f1f !important;
+        }
+
+        body.dark-mode .navbar .navbar-brand,
+        body.dark-mode .navbar .nav-link {
+            color: #e0e0e0 !important;
+        }
+
+        body.dark-mode .carousel-item .jumbotron {
+            background-color: #333333;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode footer {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .btn-primary {
+            background-color: #bb86fc;
+            border-color: #bb86fc;
+            color: #121212;
+        }
+
+        body.dark-mode .btn-primary:hover {
+            background-color: #9a67ea;
+            border-color: #9a67ea;
+            color: #121212;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Brand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <button id="darkModeToggle" class="btn btn-outline-secondary ms-auto">Dark Mode</button>
+        </div>
+    </nav>
+
+    <!-- Section Carousel -->
+    <div id="landingCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="jumbotron">
+                    <h1 class="display-4">Welcome to Our Website</h1>
+                    <p class="lead">This is the first slide of our landing page carousel.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="jumbotron">
+                    <h1 class="display-4">Our Services</h1>
+                    <p class="lead">Discover the amazing services we offer to our customers.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="jumbotron">
+                    <h1 class="display-4">Get in Touch</h1>
+                    <p class="lead">Contact us for more information and support.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#landingCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#landingCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Section Pricing -->
+    <section class="container my-5">
+        <h2 class="mb-4 text-center">Pricing</h2>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <img src="https://via.placeholder.com/150" alt="Pricing 1" class="pricing-img rounded-circle" />
+                <h5>Basic Plan</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://via.placeholder.com/150" alt="Pricing 2" class="pricing-img rounded-circle" />
+                <h5>Standard Plan</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://via.placeholder.com/150" alt="Pricing 3" class="pricing-img rounded-circle" />
+                <h5>Premium Plan</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Article -->
+    <section class="container my-5">
+        <h2 class="mb-4 text-center">Articles</h2>
+
+        <!-- Section 1: Text Left, Image Right -->
+        <div class="row align-items-center mb-5">
+            <div class="col-md-8">
+                <h3>Article Title 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec diam nec nulla
+                    condimentum
+                    tincidunt.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/500" alt="Article 1" class="article-img" />
+            </div>
+        </div>
+
+        <!-- Section 2: Image Left, Text Right -->
+        <div class="row align-items-center mb-5">
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/500" alt="Article 2" class="article-img" />
+            </div>
+            <div class="col-md-8">
+                <h3>Article Title 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec diam nec nulla
+                    condimentum
+                    tincidunt.</p>
+            </div>
+        </div>
+
+        <!-- Section 3: Text Left, Image Right -->
+        <div class="row align-items-center mb-5">
+            <div class="col-md-8">
+                <h3>Article Title 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec diam nec nulla
+                    condimentum
+                    tincidunt.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/500" alt="Article 3" class="article-img" />
+            </div>
+        </div>
+
+        <!-- Section 4: Image Left, Text Right -->
+        <div class="row align-items-center mb-5">
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/500" alt="Article 4" class="article-img" />
+            </div>
+            <div class="col-md-8">
+                <h3>Article Title 4</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec diam nec nulla
+                    condimentum
+                    tincidunt.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Nama Pengembang | <a href="#"
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Back to Top</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                toggleButton.textContent = 'Light Mode';
+            } else {
+                toggleButton.textContent = 'Dark Mode';
+            }
+        });
+    </script>
+</body>
+
+</html>
