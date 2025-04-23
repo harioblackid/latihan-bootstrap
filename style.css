@@ -1,0 +1,210 @@
+/* Profile page specific styles */
+.profile-left {
+    background-color: #d3d3d3;
+    /* gray background */
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+.profile-name {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.profile-profession {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 4rem;
+}
+
+.profile-contact {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.profile-right {
+    position: relative;
+    min-height: 100vh;
+    padding: 2rem;
+    color: white;
+    overflow: hidden;
+}
+
+.profile-right .background-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    filter: brightness(0.6);
+}
+
+.profile-right .content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    flex-direction: column;
+}
+
+.btn-github {
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.btn-github:hover {
+    background-color: #f0f0f0;
+    color: black;
+    text-decoration: none;
+}
+
+.btn-github svg {
+    width: 20px;
+    height: 20px;
+    fill: black;
+}
+
+.carousel-item {
+    height: 400px;
+}
+
+.carousel-item .jumbotron {
+    height: 100%;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #000;
+}
+
+.pricing-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.article-img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    color: #000;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+    background-color: #1f1f1f !important;
+}
+
+body.dark-mode .navbar .navbar-brand,
+body.dark-mode .navbar .nav-link {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .carousel-item .jumbotron {
+    background-color: #333333;
+    color: #e0e0e0;
+}
+
+body.dark-mode footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+body.dark-mode .btn-primary {
+    background-color: #bb86fc;
+    border-color: #bb86fc;
+    color: #121212;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #9a67ea;
+    border-color: #9a67ea;
+    color: #121212;
+}
+
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #80bdff;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode .contact-card {
+    background-color: #2d2d2d;
+}
+
+.dark-mode .form-control {
+    background-color: #3d3d3d;
+    color: #ffffff;
+    border-color: #4d4d4d;
+}
